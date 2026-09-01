@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>हरियाली नर्सरी | Plants, Pots, Manure &amp; Garden Design</title>
+<meta name="description" content="हरियाली नर्सरी - इंडोर व आउटडोर पौधे, एस्थेटिक गमले, ऑर्गेनिक खाद और गार्डन डिज़ाइन सर्विस। अपने घर और बगीचे को हरा-भरा बनाएं।">
+<meta name="keywords" content="nursery near me, plants online, gamla, pots, garden design, organic manure, vermicompost, indoor plants, outdoor plants">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.hariyalinursery.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="हरियाली नर्सरी | Plants, Pots, Manure &amp; Garden Design">
+<meta property="og:description" content="पौधों, गमलों, खाद और गार्डन डिज़ाइन के लिए आपकी लोकल नर्सरी।">
+<meta property="og:url" content="https://www.hariyalinursery.com/">
+<meta property="og:locale" content="hi_IN">
+
+<!-- Local Business structured data - Google ke liye -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GardenStore",
+  "name": "हरियाली नर्सरी (Hariyali Nursery)",
+  "description": "Plants, aesthetic pots, organic manure aur garden design services.",
+  "telephone": "+91-XXXXXXXXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "यहाँ अपना पूरा पता लिखें",
+    "addressLocality": "शहर",
+    "addressRegion": "राज्य",
+    "postalCode": "PIN",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Su 08:00-19:00",
+  "priceRange": "₹₹"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #F7F5EE;
+    --bg-warm: #F1ECDD;
+    --forest: #23402A;
+    --forest-deep: #182D1D;
+    --sage: #7C9473;
+    --sage-pale: #DCE6D6;
+    --sun: #E8A33D;
+    --sun-deep: #C97F1F;
+    --soil: #5C3D2A;
+    --ink: #1E2A1F;
+    --paper: #FFFFFE;
+    --max: 1180px;
+    --radius-soft: 4px;
+    --radius-round: 999px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Karla', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block; max-width:100%;}
+  a{color:inherit;}
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    color:var(--forest-deep);
+    line-height:1.15;
+  }
+  p{margin:0;}
+  ul{margin:0; padding:0; list-style:none;}
+  button{font-family:inherit;}
+  :focus-visible{outline:3px solid var(--sun); outline-offset:2px;}
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--bg);
+    border-bottom:1px solid rgba(35,64,42,0.12);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px;
+    max-width:var(--max);
+    margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.35rem;
+    color:var(--forest-deep);
+    text-decoration:none;
+  }
+  .brand-en{font-size:0.68rem; font-weight:500; color:var(--sage); display:block; font-family:'Karla',sans-serif; letter-spacing:0.02em;}
+  nav.links{display:flex; gap:32px;}
+  nav.links a{
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.98rem;
+    color:var(--forest-deep);
+    position:relative;
+    padding:4px 0;
+  }
+  nav.links a::after{
+    content:"";
+    position:absolute; left:0; right:100%; bottom:0;
+    height:2px; background:var(--sun);
+    transition:right .25s ease;
+  }
+  nav.links a:hover::after{right:0;}
+  .nav-cta{
+    background:var(--forest);
+    color:var(--bg) !important;
+    padding:10px 20px;
+    border-radius:var(--radius-round);
+    font-weight:700;
+    text-decoration:none;
+  }
+  .hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    background:none; border:none; cursor:pointer;
+    padding:8px;
+  }
+  .hamburger span{width:26px; height:2.5px; background:var(--forest-deep); border-radius:2px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:64px 0 40px;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:48px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 4.5vw, 3.6rem);
+    max-width:11ch;
+  }
+  .hero .sub{
+    margin-top:22px;
+    font-size:1.1rem;
+    max-width:46ch;
+    color:var(--soil);
+  }
+  .hero .cta-row{
+    margin-top:32px;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .btn-primary{
+    background:var(--sun);
+    color:var(--forest-deep);
+    font-weight:700;
+    padding:14px 28px;
+    border-radius:var(--radius-round);
+    text-decoration:none;
+    display:inline-block;
+    border:2px solid var(--sun);
+    transition:transform .15s ease;
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-ghost{
+    padding:14px 28px;
+    border-radius:var(--radius-round);
+    border:2px solid var(--forest);
+    color:var(--forest-deep);
+    font-weight:700;
+    text-decoration:none;
+  }
+  .hero-art{width:100%; height:auto;}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section{padding:76px 0;}
+  .section-bg{background:var(--paper);}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:44px;
+    flex-wrap:wrap;
+  }
+  .section-head h2{font-size:clamp(1.8rem, 3vw, 2.4rem); max-width:16ch;}
+  .section-head .tag-en{
+    font-family:'Karla',sans-serif;
+    color:var(--sage);
+    font-weight:700;
+    font-size:0.95rem;
+  }
+  .section-head p{max-width:38ch; color:var(--soil);}
+
+  /* ---------- CATEGORY GRID (Plants / Pots / Manure) ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2px;
+    background:rgba(35,64,42,0.14);
+    border:1px solid rgba(35,64,42,0.14);
+  }
+  .cat-card{
+    background:var(--paper);
+    padding:32px 28px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    min-height:210px;
+  }
+  .cat-card .icon{width:46px; height:46px; color:var(--forest);}
+  .cat-card h3{font-size:1.2rem;}
+  .cat-card p{color:var(--soil); font-size:0.95rem;}
+
+  /* ---------- POTS - alternate band ---------- */
+  .band-forest{
+    background:var(--forest-deep);
+    color:var(--bg-warm);
+  }
+  .band-forest h2, .band-forest h3{color:var(--bg-warm);}
+  .band-forest .section-head p{color:var(--sage-pale);}
+  .band-forest .tag-en{color:var(--sun);}
+  .pot-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+  }
+  .pot-item{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+  .pot-item .icon{width:52px; height:52px; color:var(--sun);}
+  .pot-item span{font-size:0.88rem; font-weight:600;}
+
+  /* ---------- MANURE list ---------- */
+  .manure-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:0;
+    border-top:1px solid rgba(35,64,42,0.16);
+  }
+  .manure-row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:20px 4px;
+    border-bottom:1px solid rgba(35,64,42,0.16);
+  }
+  .manure-row:nth-child(odd){padding-right:28px;}
+  .manure-row:nth-child(even){padding-left:28px;}
+  .manure-row .icon{width:30px; height:30px; color:var(--sun-deep); flex-shrink:0;}
+  .manure-row h4{font-size:1.05rem; font-weight:700; font-family:'Karla',sans-serif;}
+  .manure-row p{font-size:0.88rem; color:var(--soil);}
+
+  /* ---------- GARDEN DESIGN ---------- */
+  .design-wrap{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:48px;
+    align-items:center;
+  }
+  .design-services{display:flex; flex-direction:column; gap:0;}
+  .design-services li{
+    padding:20px 0;
+    border-bottom:1px solid rgba(35,64,42,0.16);
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:12px;
+  }
+  .design-services li:first-child{border-top:1px solid rgba(35,64,42,0.16);}
+  .design-services h4{font-family:'Fraunces',serif; font-size:1.15rem; font-weight:600; color:var(--forest-deep);}
+  .design-services p{font-size:0.88rem; color:var(--soil); max-width:32ch;}
+
+  /* ---------- ABOUT ---------- */
+  .about{
+    display:grid;
+    grid-template-columns:0.8fr 1.2fr;
+    gap:48px;
+    align-items:center;
+  }
+  .about p{color:var(--soil); font-size:1.05rem; max-width:56ch;}
+  .about p + p{margin-top:16px;}
+
+  /* ---------- CONTACT ---------- */
+  .contact-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+  }
+  .info-line{
+    display:flex; gap:14px; align-items:flex-start;
+    padding:16px 0;
+    border-bottom:1px solid rgba(35,64,42,0.16);
+  }
+  .info-line .icon{width:24px; height:24px; color:var(--sun); flex-shrink:0; margin-top:2px;}
+  .info-line strong{display:block; font-size:0.95rem;}
+  .info-line span{font-size:0.9rem; color:var(--soil);}
+  .whatsapp-btn{
+    margin-top:24px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--forest);
+    color:var(--bg) !important;
+    padding:14px 26px;
+    border-radius:var(--radius-round);
+    text-decoration:none;
+    font-weight:700;
+  }
+  form{display:flex; flex-direction:column; gap:14px;}
+  form label{font-size:0.85rem; font-weight:700; color:var(--forest-deep);}
+  form input, form textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1.5px solid rgba(35,64,42,0.3);
+    border-radius:var(--radius-soft);
+    font-family:'Karla',sans-serif;
+    font-size:0.95rem;
+    background:var(--paper);
+  }
+  form textarea{min-height:110px; resize:vertical;}
+  form button{
+    margin-top:6px;
+    align-self:flex-start;
+    background:var(--sun);
+    color:var(--forest-deep);
+    border:none;
+    padding:14px 30px;
+    border-radius:var(--radius-round);
+    font-weight:700;
+    cursor:pointer;
+  }
+  .form-note{font-size:0.8rem; color:var(--sage); margin-top:6px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--forest-deep);
+    color:var(--sage-pale);
+    padding:48px 0 28px;
+  }
+  .foot-row{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:24px;
+    padding-bottom:28px;
+    border-bottom:1px solid rgba(247,245,238,0.15);
+  }
+  .foot-brand{font-family:'Fraunces',serif; color:var(--bg-warm); font-size:1.3rem; font-weight:600;}
+  .foot-links{display:flex; gap:28px; flex-wrap:wrap;}
+  .foot-links a{text-decoration:none; color:var(--sage-pale); font-size:0.92rem;}
+  .foot-bottom{padding-top:20px; font-size:0.82rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px){
+    nav.links{display:none;}
+    .hamburger{display:flex;}
+    .nav-cta{display:none;}
+    .hero .wrap{grid-template-columns:1fr; gap:32px;}
+    .hero-art{max-width:340px; margin:0 auto;}
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .pot-grid{grid-template-columns:repeat(3,1fr);}
+    .manure-list{grid-template-columns:1fr;}
+    .manure-row:nth-child(odd){padding-right:4px;}
+    .manure-row:nth-child(even){padding-left:4px;}
+    .design-wrap{grid-template-columns:1fr;}
+    .about{grid-template-columns:1fr;}
+    .contact-wrap{grid-template-columns:1fr;}
+    .section{padding:56px 0;}
+  }
+  @media (max-width: 560px){
+    .grid{grid-template-columns:1fr;}
+    .pot-grid{grid-template-columns:repeat(2,1fr);}
+    .foot-row{flex-direction:column;}
+  }
+
+  /* mobile nav drawer */
+  .mobile-drawer{
+    display:none;
+    flex-direction:column;
+    background:var(--paper);
+    border-top:1px solid rgba(35,64,42,0.12);
+    padding:8px 24px 20px;
+  }
+  .mobile-drawer.open{display:flex;}
+  .mobile-drawer a{
+    padding:14px 0;
+    text-decoration:none;
+    color:var(--forest-deep);
+    font-weight:600;
+    border-bottom:1px solid rgba(35,64,42,0.1);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-row">
+    <a href="#top" class="brand">
+      <span>हरियाली नर्सरी<span class="brand-en">HARIYALI NURSERY</span></span>
+    </a>
+    <nav class="links">
+      <a href="#plants">पौधे</a>
+      <a href="#pots">गमले</a>
+      <a href="#manure">खाद</a>
+      <a href="#design">गार्डन डिज़ाइन</a>
+      <a href="#about">हमारे बारे में</a>
+    </nav>
+    <a href="#contact" class="nav-cta">संपर्क करें</a>
+    <button class="hamburger" id="hamburger" aria-label="मेन्यू खोलें" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#plants">पौधे — Plants</a>
+    <a href="#pots">गमले — Pots</a>
+    <a href="#manure">खाद — Manure</a>
+    <a href="#design">गार्डन डिज़ाइन — Design</a>
+    <a href="#about">हमारे बारे में</a>
+    <a href="#contact">संपर्क करें</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>आपके घर में हरियाली,<br>आपके बगीचे में जान</h1>
+        <p class="sub">पौधों, गमलों, ऑर्गेनिक खाद और गार्डन डिज़ाइन की हर ज़रूरत — एक ही जगह। हर पौधा हाथों से चुना और देखभाल के साथ तैयार किया जाता है।</p>
+        <div class="cta-row">
+          <a href="#plants" class="btn-primary">कैटलॉग देखें</a>
+          <a href="#contact" class="btn-ghost">ऑर्डर के लिए बात करें</a>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="गमलों में पौधों का चित्र">
+        <!-- back pot -->
+        <path d="M120 260 L300 260 L285 340 Q210 358 135 340 Z" fill="#DCE6D6"/>
+        <path d="M120 260 L300 260 L285 340 Q210 358 135 340 Z" stroke="#23402A" stroke-width="3" fill="none"/>
+        <path d="M40 210 Q60 130 130 130 Q120 190 90 220 Q60 240 40 210 Z" fill="#7C9473"/>
+        <path d="M60 300 Q90 220 60 160" stroke="#23402A" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+        <!-- front pot -->
+        <path d="M150 300 L340 300 L322 396 Q245 412 168 396 Z" fill="#E8A33D"/>
+        <path d="M150 300 L340 300 L322 396 Q245 412 168 396 Z" stroke="#23402A" stroke-width="3" fill="none"/>
+        <path d="M150 300 L340 300 L346 268 L144 268 Z" fill="#F1ECDD" stroke="#23402A" stroke-width="3"/>
+
+        <!-- big leaf plant in front pot -->
+        <path d="M245 268 C245 210 200 170 150 150 C210 190 220 230 225 268 Z" fill="#23402A"/>
+        <path d="M245 268 C245 200 300 160 360 150 C290 180 260 220 255 268 Z" fill="#7C9473"/>
+        <path d="M245 268 C240 190 245 130 245 90" stroke="#23402A" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <ellipse cx="245" cy="90" rx="10" ry="16" fill="#23402A"/>
+
+        <!-- small sun flower -->
+        <circle cx="90" cy="140" r="16" fill="#E8A33D"/>
+        <circle cx="90" cy="140" r="7" fill="#5C3D2A"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- PLANTS -->
+  <section id="plants" class="section section-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="tag-en">Plants</span>
+          <h2>पौधों की हर वैरायटी</h2>
+        </div>
+        <p>इनडोर, आउटडोर, फूलों वाले, फलदार और औषधीय पौधे — हर तरह के पौधे उपलब्ध, आपके स्पेस और देखभाल की क्षमता के हिसाब से सुझाव के साथ।</p>
+      </div>
+      <div class="grid">
+
+        <div class="cat-card">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 42V20"/><path d="M24 22C24 10 14 8 8 8C8 20 16 24 24 22Z"/><path d="M24 30C24 20 34 18 40 18C40 28 32 34 24 30Z"/></svg>
+          <h3>इनडोर पौधे</h3>
+          <p>मनी प्लांट, स्नेक प्लांट, एरेका पाम, पीस लिली, ZZ प्लांट — कम रोशनी और घर के अंदर के लिए बेस्ट।</p>
+        </div>
+
+        <div class="cat-card">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 40h32"/><path d="M24 40V16"/><path d="M14 24l10-8 10 8"/><path d="M24 24l6 6M24 24l-6 6"/></svg>
+          <h3>आउटडोर / गार्डन पौधे</h3>
+          <p>तुलसी, हिबिस्कस, बोगेनविलिया, नीम, अशोक — बगीचे और छत के लिए मज़बूत पौधे।</p>
+        </div>
+
+        <div class="cat-card">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="18" r="6"/><path d="M24 24v18"/><path d="M18 30l-6 4M30 30l6 4"/></svg>
+          <h3>फूलों वाले पौधे</h3>
+          <p>गुलाब, गेंदा, जरबेरा, पिटूनिया, मोगरा — रंग-बिरंगे फूलों से बगीचा सजाएं।</p>
+        </div>
+
+        <div class="cat-card">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="20" r="10"/><path d="M24 30v12"/><path d="M20 42h8"/></svg>
+          <h3>फलदार पौधे</h3>
+          <p>अमरूद, नींबू, अनार, पपीता, आम — घर में ताज़े फल उगाने के लिए।</p>
+        </div>
+
+        <div class="cat-card">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="16" y="28" width="16" height="14" rx="2"/><path d="M24 28c-4-6-4-14 0-20 4 6 4 14 0 20Z"/></svg>
+          <h3>सक्युलेंट्स और कैक्टस</h3>
+          <p>कम पानी में पनपने वाले, ऑफिस डेस्क और छोटी जगहों के लिए परफेक्ट।</p>
+        </div>
+
+        <div class="cat-card">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 40c0-16 6-26 12-32 6 6 12 16 12 32"/><path d="M24 40V22"/></svg>
+          <h3>औषधीय / हर्बल पौधे</h3>
+          <p>एलोवेरा, तुलसी, पुदीना, अश्वगंधा — सेहत के लिए घर पर ही जड़ी-बूटियां।</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- POTS -->
+  <section id="pots" class="section band-forest">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="tag-en">Pots</span>
+          <h2>एस्थेटिक गमलों का कलेक्शन</h2>
+        </div>
+        <p>हर स्टाइल और बजट के गमले — टेराकोटा से लेकर डिज़ाइनर सेरामिक तक।</p>
+      </div>
+      <div class="pot-grid">
+
+        <div class="pot-item">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 18h24l-3 22a3 3 0 01-3 3H18a3 3 0 01-3-3z"/><path d="M10 18h28"/></svg>
+          <span>टेराकोटा पॉट्स</span>
+        </div>
+
+        <div class="pot-item">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 16h20l-2 24H16z"/><circle cx="24" cy="10" r="4"/></svg>
+          <span>सेरामिक पॉट्स</span>
+        </div>
+
+        <div class="pot-item">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 6v10"/><path d="M14 16h20l-3 20H17z"/><path d="M12 16h24"/></svg>
+          <span>हैंगिंग पॉट्स</span>
+        </div>
+
+        <div class="pot-item">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="18" width="24" height="22" rx="2"/><path d="M12 18h24"/></svg>
+          <span>सीमेंट / कंक्रीट पॉट्स</span>
+        </div>
+
+        <div class="pot-item">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18h16l-2 20H18z"/><path d="M14 18h20"/><path d="M20 24l1 10M28 24l-1 10"/></svg>
+          <span>फाइबर / प्लास्टिक पॉट्स</span>
+        </div>
+
+        <div class="pot-item">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 20h20l-3 18H17z"/><path d="M12 20h24"/><circle cx="24" cy="14" r="3"/><circle cx="18" cy="16" r="2"/><circle cx="30" cy="16" r="2"/></svg>
+          <span>डिज़ाइनर / डेकोरेटिव पॉट्स</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MANURE -->
+  <section id="manure" class="section section-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="tag-en">Manure &amp; Soil</span>
+          <h2>खाद और गमला मिश्रण</h2>
+        </div>
+        <p>पौधों की सही ग्रोथ के लिए सही खाद ज़रूरी है — हर पौधे के हिसाब से सही मिश्रण चुनने में मदद भी करते हैं।</p>
+      </div>
+      <div class="manure-list">
+
+        <div class="manure-row">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 26c8-4 12-4 20 0"/><path d="M6 20c8-4 12-4 20 0"/><path d="M6 14c8-4 12-4 20 0"/></svg>
+          <div><h4>ऑर्गेनिक खाद (गोबर खाद)</h4><p>प्राकृतिक तरीके से मिट्टी को उपजाऊ बनाने के लिए।</p></div>
+        </div>
+
+        <div class="manure-row">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="4"/><circle cx="8" cy="10" r="2"/><circle cx="24" cy="10" r="2"/><circle cx="8" cy="22" r="2"/><circle cx="24" cy="22" r="2"/></svg>
+          <div><h4>वर्मीकम्पोस्ट</h4><p>केंचुओं से बनी खाद, जड़ों की मज़बूत ग्रोथ के लिए बेस्ट।</p></div>
+        </div>
+
+        <div class="manure-row">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="10" width="20" height="14" rx="2"/><path d="M10 10V6h12v4"/></svg>
+          <div><h4>कोकोपीट</h4><p>पानी रोकने की बेहतरीन क्षमता, गमलों की मिट्टी हल्की रखने के लिए।</p></div>
+        </div>
+
+        <div class="manure-row">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 6l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6z"/></svg>
+          <div><h4>बोन मील</h4><p>फूल और फल देने वाले पौधों के लिए फॉस्फोरस से भरपूर खाद।</p></div>
+        </div>
+
+        <div class="manure-row">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="6" width="16" height="20" rx="2"/><path d="M12 12h8M12 16h8M12 20h5"/></svg>
+          <div><h4>NPK फर्टिलाइज़र</h4><p>नाइट्रोजन-फॉस्फोरस-पोटाश का सही अनुपात, तेज़ ग्रोथ के लिए।</p></div>
+        </div>
+
+        <div class="manure-row">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 24c4-10 16-10 20 0z"/><circle cx="16" cy="12" r="3"/></svg>
+          <div><h4>पॉटिंग मिक्स (गमला मिश्रण)</h4><p>मिट्टी + खाद + कोकोपीट का बना-बनाया रेडी मिक्स।</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GARDEN DESIGN -->
+  <section id="design" class="section band-forest">
+    <div class="wrap design-wrap">
+      <div>
+        <span class="tag-en">Garden Design</span>
+        <h2 style="margin-top:8px;">आपके स्पेस के हिसाब से गार्डन डिज़ाइन</h2>
+        <p style="margin-top:16px; color:var(--sage-pale); max-width:44ch;">छोटी बालकनी हो या बड़ा बगीचा — जगह देखकर सही पौधों और लेआउट का सुझाव देते हैं।</p>
+      </div>
+      <ul class="design-services">
+        <li><h4>होम गार्डन डिज़ाइन</h4><p>पूरे घर के बगीचे की प्लानिंग और सेटअप।</p></li>
+        <li><h4>टेरेस / बालकनी गार्डन</h4><p>छोटी जगह में भी हरियाली — कस्टम पॉट लेआउट।</p></li>
+        <li><h4>लैंडस्केप डिज़ाइन</h4><p>लॉन, पाथवे और फ्लावर बेड की पूरी डिज़ाइनिंग।</p></li>
+        <li><h4>वर्टिकल गार्डन</h4><p>दीवारों पर हरियाली, जगह की बचत के साथ।</p></li>
+        <li><h4>मेंटेनेंस सर्विस</h4><p>नियमित देखभाल, कटाई-छंटाई और खाद सर्विस।</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section-bg">
+    <div class="wrap about">
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="नर्सरी चित्र">
+        <circle cx="150" cy="150" r="140" fill="#DCE6D6"/>
+        <path d="M90 210 Q90 120 150 90 Q210 120 210 210 Z" fill="#7C9473"/>
+        <path d="M150 210V90" stroke="#23402A" stroke-width="4"/>
+        <path d="M150 130 Q110 120 100 90" stroke="#23402A" stroke-width="3" fill="none"/>
+        <path d="M150 160 Q195 150 205 120" stroke="#23402A" stroke-width="3" fill="none"/>
+        <rect x="70" y="210" width="160" height="40" rx="4" fill="#E8A33D"/>
+      </svg>
+      <div>
+        <span class="tag-en">हमारे बारे में</span>
+        <h2 style="margin-top:8px;">पौधों से जुड़ा प्यार, सालों का अनुभव</h2>
+        <p style="margin-top:16px;">हरियाली नर्सरी एक फैमिली-रन नर्सरी है, जहां हर पौधा हाथों से चुना और देखभाल के साथ तैयार किया जाता है। हमारा मकसद सिर्फ पौधे बेचना नहीं, बल्कि आपको सही पौधा, सही गमला और सही तरीका बताना है ताकि वो आपके घर में लंबे समय तक हरा-भरा रहे।</p>
+        <p>चाहे आप पहली बार गार्डनिंग शुरू कर रहे हों या अपने बगीचे को नया रूप देना चाहते हों — हम हर कदम पर आपकी मदद के लिए तैयार हैं।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="tag-en">Contact</span>
+          <h2>संपर्क करें</h2>
+        </div>
+        <p>ऑर्डर, विज़िट या गार्डन डिज़ाइन कंसल्टेशन के लिए नीचे दिए गए तरीकों से संपर्क करें।</p>
+      </div>
+      <div class="contact-wrap">
+        <div>
+          <div class="info-line">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div><strong>फ़ोन / व्हाट्सऐप</strong><span>+91 XXXXX XXXXX &nbsp;(यहाँ अपना नंबर डालें)</span></div>
+          </div>
+          <div class="info-line">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><strong>पता</strong><span>यहाँ नर्सरी का पूरा पता डालें</span></div>
+          </div>
+          <div class="info-line">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+            <div><strong>ईमेल</strong><span>yourmail@example.com</span></div>
+          </div>
+          <div class="info-line">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <div><strong>समय</strong><span>रोज़ सुबह 8:00 बजे — शाम 7:00 बजे तक खुला</span></div>
+          </div>
+          <a class="whatsapp-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 003.7 17L2 22l5.2-1.6A11 11 0 1020.5 3.5zM12 20a8 8 0 01-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1112 20z"/></svg>
+            व्हाट्सऐप पर मैसेज करें
+          </a>
+        </div>
+        <form action="mailto:yourmail@example.com" method="post" enctype="text/plain">
+          <div>
+            <label for="name">आपका नाम</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="phone">फ़ोन नंबर</label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+          <div>
+            <label for="msg">आपकी ज़रूरत बताएं (पौधे / गमले / खाद / गार्डन डिज़ाइन)</label>
+            <textarea id="msg" name="message" required></textarea>
+          </div>
+          <button type="submit">मैसेज भेजें</button>
+          <p class="form-note">नोट: यह फॉर्म अभी आपके ईमेल ऐप में खुलेगा। बाद में ऑनलाइन ऑर्डर फॉर्म भी जोड़ा जा सकता है।</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <span class="foot-brand">हरियाली नर्सरी</span>
+      <nav class="foot-links">
+        <a href="#plants">पौधे</a>
+        <a href="#pots">गमले</a>
+        <a href="#manure">खाद</a>
+        <a href="#design">गार्डन डिज़ाइन</a>
+        <a href="#contact">संपर्क</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year"></span> हरियाली नर्सरी। सर्वाधिकार सुरक्षित।</span>
+      <span>Made with care for plant lovers</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('mobileDrawer');
+  hamburger.addEventListener('click', () => {
+    const isOpen = drawer.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
