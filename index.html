@@ -1210,9 +1210,32 @@
   const modalClose = document.getElementById('modalClose');
   const WHATSAPP_NUMBER = "919017426024";
 
+  /* Pool of distinct, verified free-license photos - rotated across variety cards
+     so every card in a category shows a different image. */
+  const PHOTO_POOL = [
+    "https://images.unsplash.com/photo-1651583687336-b168f1dbf34f?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1565626929866-e11c64e607cf?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1527195694714-9b939fac3432?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1554380941-51b202f69916?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1540882599533-bfc50cdbd0be?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1554836712-e6754d8f02ad?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1586873061063-8223e6dcce07?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1551893665-f843f600794e?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1490370946242-34092dbf29f8?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1603517428838-fea2e7dc0096?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1611651625032-153048f0da00?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1763824968861-3aa2c20e4598?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1607250589107-b8efff3a8d5a?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1762424362012-11e948c5d91d?w=800&q=75&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1772907952251-09e722aafa6a?w=800&q=75&auto=format&fit=crop"
+  ];
+  const CATEGORY_ORDER = ["indoor","outdoor","flowering","fruit","succulents","medicinal","terracotta","ceramic","hanging","cement","fiber","designer"];
+
   function openVarietyModal(key){
     const data = varietyData[key];
     if(!data) return;
+    const catOffset = CATEGORY_ORDER.indexOf(key) * 3;
     modalPhoto.src = data.photo;
     modalPhoto.alt = data.title;
     modalTitle.textContent = data.title;
@@ -1221,10 +1244,11 @@
     modalCount.textContent = data.items.length + " वैरायटी";
     modalGrid.innerHTML = data.items.map(([name, desc], i) => {
       const msg = encodeURIComponent(`नमस्ते दिशा गार्डनिंग, मुझे "${name}" (${data.title}) के बारे में जानकारी चाहिए।`);
+      const photo = PHOTO_POOL[(catOffset + i) % PHOTO_POOL.length];
       return `<div class="variety-item" style="animation-delay:${i * 0.06}s">
         <div class="variety-visual">
           <span class="variety-badge">${data.title}</span>
-          <img src="${data.photo}" alt="${name}" loading="lazy">
+          <img src="${photo}" alt="${name}" loading="lazy">
         </div>
         <div class="variety-info">
           <h4>${name}</h4>
