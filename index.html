@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>हरियाली नर्सरी | Plants, Pots, Manure &amp; Garden Design</title>
-<meta name="description" content="हरियाली नर्सरी - इंडोर व आउटडोर पौधे, एस्थेटिक गमले, ऑर्गेनिक खाद और गार्डन डिज़ाइन सर्विस। अपने घर और बगीचे को हरा-भरा बनाएं।">
-<meta name="keywords" content="nursery near me, plants online, gamla, pots, garden design, organic manure, vermicompost, indoor plants, outdoor plants">
+<title>दिशा गार्डनिंग | Disha Gardening — Plants, Pots, Manure &amp; Garden Design</title>
+<meta name="description" content="दिशा गार्डनिंग - इंडोर व आउटडोर पौधे, एस्थेटिक गमले, ऑर्गेनिक खाद और गार्डन डिज़ाइन सर्विस। अपने घर और बगीचे को हरा-भरा बनाएं।">
+<meta name="keywords" content="nursery near me, plants online, gamla, pots, garden design, organic manure, vermicompost, indoor plants, outdoor plants, disha gardening">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.hariyalinursery.com/">
+<link rel="canonical" href="https://www.dishagardening.com/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="हरियाली नर्सरी | Plants, Pots, Manure &amp; Garden Design">
+<meta property="og:title" content="दिशा गार्डनिंग | Disha Gardening — Plants, Pots, Manure &amp; Garden Design">
 <meta property="og:description" content="पौधों, गमलों, खाद और गार्डन डिज़ाइन के लिए आपकी लोकल नर्सरी।">
-<meta property="og:url" content="https://www.hariyalinursery.com/">
+<meta property="og:url" content="https://www.dishagardening.com/">
 <meta property="og:locale" content="hi_IN">
 
 <!-- Local Business structured data - Google ke liye -->
@@ -21,18 +21,16 @@
 {
   "@context": "https://schema.org",
   "@type": "GardenStore",
-  "name": "हरियाली नर्सरी (Hariyali Nursery)",
+  "name": "दिशा गार्डनिंग (Disha Gardening)",
   "description": "Plants, aesthetic pots, organic manure aur garden design services.",
-  "telephone": "+91-XXXXXXXXXX",
+  "telephone": "+91-8053549942",
+  "email": "sainiabhishek9994@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "यहाँ अपना पूरा पता लिखें",
-    "addressLocality": "शहर",
-    "addressRegion": "राज्य",
-    "postalCode": "PIN",
+    "streetAddress": "13-17, Sector, HUDA",
     "addressCountry": "IN"
   },
-  "openingHours": "Mo-Su 08:00-19:00",
+  "openingHours": "Mo-Su 00:00-23:59",
   "priceRange": "₹₹"
 }
 </script>
@@ -147,6 +145,24 @@
   .hero{
     padding:64px 0 40px;
     overflow:hidden;
+    position:relative;
+  }
+  .hero-bg{
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+  }
+  .hero-bg img{
+    width:100%; height:100%;
+    object-fit:cover;
+    opacity:0.10;
+    transform:scale(1.08);
+    animation:heroZoom 18s ease-in-out infinite alternate;
+  }
+  @keyframes heroZoom{
+    from{transform:scale(1.08);}
+    to{transform:scale(1.16);}
   }
   .hero .wrap{
     display:grid;
@@ -157,18 +173,28 @@
   .hero h1{
     font-size:clamp(2.4rem, 4.5vw, 3.6rem);
     max-width:11ch;
+    opacity:0;
+    animation:fadeUp .8s ease forwards;
   }
   .hero .sub{
     margin-top:22px;
     font-size:1.1rem;
     max-width:46ch;
     color:var(--soil);
+    opacity:0;
+    animation:fadeUp .8s ease forwards .15s;
   }
   .hero .cta-row{
     margin-top:32px;
     display:flex;
     gap:16px;
     flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .8s ease forwards .3s;
+  }
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(18px);}
+    to{opacity:1; transform:translateY(0);}
   }
   .btn-primary{
     background:var(--sun);
@@ -179,9 +205,9 @@
     text-decoration:none;
     display:inline-block;
     border:2px solid var(--sun);
-    transition:transform .15s ease;
+    transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease;
   }
-  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-primary:hover{transform:translateY(-3px) scale(1.02); box-shadow:0 10px 24px rgba(232,163,61,0.35);}
   .btn-ghost{
     padding:14px 28px;
     border-radius:var(--radius-round);
@@ -189,8 +215,10 @@
     color:var(--forest-deep);
     font-weight:700;
     text-decoration:none;
+    transition:transform .25s cubic-bezier(.34,1.56,.64,1), background .25s ease, color .25s ease;
   }
-  .hero-art{width:100%; height:auto;}
+  .btn-ghost:hover{background:var(--forest); color:var(--bg); transform:translateY(-3px);}
+  .hero-art{width:100%; height:auto; opacity:0; animation:fadeUp 1s ease forwards .25s;}
 
   /* ---------- SECTION HEADERS ---------- */
   .section{padding:76px 0;}
@@ -222,12 +250,20 @@
   }
   .cat-card{
     background:var(--paper);
-    padding:32px 28px;
+    padding:0 0 28px;
     display:flex;
     flex-direction:column;
     gap:14px;
     min-height:210px;
   }
+  .cat-card .card-body{padding:0 28px; display:flex; flex-direction:column; gap:14px;}
+  .card-photo{
+    width:100%;
+    aspect-ratio:4/3;
+    background:var(--sage-pale);
+    overflow:hidden;
+  }
+  .card-photo img{width:100%; height:100%; object-fit:cover; display:block;}
   .cat-card .icon{width:46px; height:46px; color:var(--forest);}
   .cat-card h3{font-size:1.2rem;}
   .cat-card p{color:var(--soil); font-size:0.95rem;}
@@ -254,6 +290,14 @@
   }
   .pot-item .icon{width:52px; height:52px; color:var(--sun);}
   .pot-item span{font-size:0.88rem; font-weight:600;}
+  .pot-photo{
+    width:88px; height:88px;
+    border-radius:50%;
+    overflow:hidden;
+    background:rgba(247,245,238,0.15);
+    border:2px solid var(--sun);
+  }
+  .pot-photo img{width:100%; height:100%; object-fit:cover; display:block;}
 
   /* ---------- MANURE list ---------- */
   .manure-list{
@@ -417,8 +461,38 @@
 
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
-    *{transition:none !important;}
+    *{transition:none !important; animation:none !important;}
   }
+
+  /* ---------- SCROLL REVEAL + HOVER MOTION ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+  }
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+
+  .cat-card{transition:transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease;}
+  .cat-card:hover{transform:translateY(-8px); box-shadow:0 18px 36px rgba(35,64,42,0.14); z-index:2;}
+  .card-photo img{transition:transform .5s cubic-bezier(.22,1,.36,1);}
+  .cat-card:hover .card-photo img{transform:scale(1.08);}
+
+  .pot-item{transition:transform .3s ease;}
+  .pot-item:hover{transform:translateY(-6px);}
+  .pot-photo{transition:border-color .3s ease, transform .3s cubic-bezier(.22,1,.36,1);}
+  .pot-item:hover .pot-photo{transform:scale(1.06); border-color:var(--bg-warm);}
+
+  .manure-row{transition:transform .25s ease, background .25s ease;}
+  .manure-row:hover{transform:translateX(6px);}
+
+  .design-services li{transition:padding-left .25s ease, border-color .25s ease;}
+  .design-services li:hover{padding-left:12px; border-color:var(--sun);}
+
+  .whatsapp-btn{transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease;}
+  .whatsapp-btn:hover{transform:translateY(-3px) scale(1.02); box-shadow:0 12px 26px rgba(35,64,42,0.3);}
+
+  header{transition:box-shadow .3s ease;}
+  header.scrolled{box-shadow:0 4px 18px rgba(35,64,42,0.08);}
 </style>
 </head>
 <body>
@@ -426,7 +500,7 @@
 <header>
   <div class="nav-row">
     <a href="#top" class="brand">
-      <span>हरियाली नर्सरी<span class="brand-en">HARIYALI NURSERY</span></span>
+      <span>दिशा गार्डनिंग<span class="brand-en">DISHA GARDENING</span></span>
     </a>
     <nav class="links">
       <a href="#plants">पौधे</a>
@@ -454,6 +528,7 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-bg"><img src="https://images.unsplash.com/photo-1772907952251-09e722aafa6a?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" alt="" aria-hidden="true"></div>
     <div class="wrap">
       <div>
         <h1>आपके घर में हरियाली,<br>आपके बगीचे में जान</h1>
@@ -491,7 +566,7 @@
   <!-- PLANTS -->
   <section id="plants" class="section section-bg">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <div>
           <span class="tag-en">Plants</span>
           <h2>पौधों की हर वैरायटी</h2>
@@ -500,40 +575,58 @@
       </div>
       <div class="grid">
 
-        <div class="cat-card">
+        <div class="cat-card reveal">
+          <div class="card-photo"><img src="https://images.unsplash.com/photo-1554380941-51b202f69916?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="इनडोर पौधे" loading="lazy"></div>
+          <div class="card-body">
           <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 42V20"/><path d="M24 22C24 10 14 8 8 8C8 20 16 24 24 22Z"/><path d="M24 30C24 20 34 18 40 18C40 28 32 34 24 30Z"/></svg>
           <h3>इनडोर पौधे</h3>
           <p>मनी प्लांट, स्नेक प्लांट, एरेका पाम, पीस लिली, ZZ प्लांट — कम रोशनी और घर के अंदर के लिए बेस्ट।</p>
+          </div>
         </div>
 
-        <div class="cat-card">
+        <div class="cat-card reveal">
+          <div class="card-photo"><img src="https://images.unsplash.com/photo-1540882599533-bfc50cdbd0be?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="आउटडोर पौधे" loading="lazy"></div>
+          <div class="card-body">
           <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 40h32"/><path d="M24 40V16"/><path d="M14 24l10-8 10 8"/><path d="M24 24l6 6M24 24l-6 6"/></svg>
           <h3>आउटडोर / गार्डन पौधे</h3>
           <p>तुलसी, हिबिस्कस, बोगेनविलिया, नीम, अशोक — बगीचे और छत के लिए मज़बूत पौधे।</p>
+          </div>
         </div>
 
-        <div class="cat-card">
+        <div class="cat-card reveal">
+          <div class="card-photo"><img src="https://images.unsplash.com/photo-1554836712-e6754d8f02ad?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="फूलों वाले पौधे" loading="lazy"></div>
+          <div class="card-body">
           <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="18" r="6"/><path d="M24 24v18"/><path d="M18 30l-6 4M30 30l6 4"/></svg>
           <h3>फूलों वाले पौधे</h3>
           <p>गुलाब, गेंदा, जरबेरा, पिटूनिया, मोगरा — रंग-बिरंगे फूलों से बगीचा सजाएं।</p>
+          </div>
         </div>
 
-        <div class="cat-card">
+        <div class="cat-card reveal">
+          <div class="card-photo"><img src="https://images.unsplash.com/photo-1586873061063-8223e6dcce07?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="फलदार पौधे" loading="lazy"></div>
+          <div class="card-body">
           <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="20" r="10"/><path d="M24 30v12"/><path d="M20 42h8"/></svg>
           <h3>फलदार पौधे</h3>
           <p>अमरूद, नींबू, अनार, पपीता, आम — घर में ताज़े फल उगाने के लिए।</p>
+          </div>
         </div>
 
-        <div class="cat-card">
+        <div class="cat-card reveal">
+          <div class="card-photo"><img src="https://images.unsplash.com/photo-1551893665-f843f600794e?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="सक्युलेंट्स और कैक्टस" loading="lazy"></div>
+          <div class="card-body">
           <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="16" y="28" width="16" height="14" rx="2"/><path d="M24 28c-4-6-4-14 0-20 4 6 4 14 0 20Z"/></svg>
           <h3>सक्युलेंट्स और कैक्टस</h3>
           <p>कम पानी में पनपने वाले, ऑफिस डेस्क और छोटी जगहों के लिए परफेक्ट।</p>
+          </div>
         </div>
 
-        <div class="cat-card">
+        <div class="cat-card reveal">
+          <div class="card-photo"><img src="https://images.unsplash.com/photo-1490370946242-34092dbf29f8?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="औषधीय पौधे" loading="lazy"></div>
+          <div class="card-body">
           <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 40c0-16 6-26 12-32 6 6 12 16 12 32"/><path d="M24 40V22"/></svg>
           <h3>औषधीय / हर्बल पौधे</h3>
           <p>एलोवेरा, तुलसी, पुदीना, अश्वगंधा — सेहत के लिए घर पर ही जड़ी-बूटियां।</p>
+          </div>
         </div>
 
       </div>
@@ -543,7 +636,7 @@
   <!-- POTS -->
   <section id="pots" class="section band-forest">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <div>
           <span class="tag-en">Pots</span>
           <h2>एस्थेटिक गमलों का कलेक्शन</h2>
@@ -552,33 +645,33 @@
       </div>
       <div class="pot-grid">
 
-        <div class="pot-item">
-          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 18h24l-3 22a3 3 0 01-3 3H18a3 3 0 01-3-3z"/><path d="M10 18h28"/></svg>
+        <div class="pot-item reveal">
+          <div class="pot-photo"><img src="https://images.unsplash.com/photo-1603517428838-fea2e7dc0096?w=300&amp;q=80&amp;auto=format&amp;fit=crop" alt="टेराकोटा पॉट्स" loading="lazy"></div>
           <span>टेराकोटा पॉट्स</span>
         </div>
 
-        <div class="pot-item">
-          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 16h20l-2 24H16z"/><circle cx="24" cy="10" r="4"/></svg>
+        <div class="pot-item reveal">
+          <div class="pot-photo"><img src="https://images.unsplash.com/photo-1611651625032-153048f0da00?w=300&amp;q=80&amp;auto=format&amp;fit=crop" alt="सेरामिक पॉट्स" loading="lazy"></div>
           <span>सेरामिक पॉट्स</span>
         </div>
 
-        <div class="pot-item">
-          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 6v10"/><path d="M14 16h20l-3 20H17z"/><path d="M12 16h24"/></svg>
+        <div class="pot-item reveal">
+          <div class="pot-photo"><img src="https://images.unsplash.com/photo-1763824968861-3aa2c20e4598?w=300&amp;q=80&amp;auto=format&amp;fit=crop" alt="हैंगिंग पॉट्स" loading="lazy"></div>
           <span>हैंगिंग पॉट्स</span>
         </div>
 
-        <div class="pot-item">
-          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="18" width="24" height="22" rx="2"/><path d="M12 18h24"/></svg>
+        <div class="pot-item reveal">
+          <div class="pot-photo"><img src="https://images.unsplash.com/photo-1607250589107-b8efff3a8d5a?w=300&amp;q=80&amp;auto=format&amp;fit=crop" alt="सीमेंट पॉट्स" loading="lazy"></div>
           <span>सीमेंट / कंक्रीट पॉट्स</span>
         </div>
 
-        <div class="pot-item">
-          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18h16l-2 20H18z"/><path d="M14 18h20"/><path d="M20 24l1 10M28 24l-1 10"/></svg>
+        <div class="pot-item reveal">
+          <div class="pot-photo"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=300&amp;q=80&amp;auto=format&amp;fit=crop" alt="फाइबर पॉट्स" loading="lazy"></div>
           <span>फाइबर / प्लास्टिक पॉट्स</span>
         </div>
 
-        <div class="pot-item">
-          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 20h20l-3 18H17z"/><path d="M12 20h24"/><circle cx="24" cy="14" r="3"/><circle cx="18" cy="16" r="2"/><circle cx="30" cy="16" r="2"/></svg>
+        <div class="pot-item reveal">
+          <div class="pot-photo"><img src="https://images.unsplash.com/photo-1762424362012-11e948c5d91d?w=300&amp;q=80&amp;auto=format&amp;fit=crop" alt="डिज़ाइनर पॉट्स" loading="lazy"></div>
           <span>डिज़ाइनर / डेकोरेटिव पॉट्स</span>
         </div>
 
@@ -589,14 +682,14 @@
   <!-- MANURE -->
   <section id="manure" class="section section-bg">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <div>
           <span class="tag-en">Manure &amp; Soil</span>
           <h2>खाद और गमला मिश्रण</h2>
         </div>
         <p>पौधों की सही ग्रोथ के लिए सही खाद ज़रूरी है — हर पौधे के हिसाब से सही मिश्रण चुनने में मदद भी करते हैं।</p>
       </div>
-      <div class="manure-list">
+      <div class="manure-list reveal">
 
         <div class="manure-row">
           <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 26c8-4 12-4 20 0"/><path d="M6 20c8-4 12-4 20 0"/><path d="M6 14c8-4 12-4 20 0"/></svg>
@@ -634,7 +727,7 @@
 
   <!-- GARDEN DESIGN -->
   <section id="design" class="section band-forest">
-    <div class="wrap design-wrap">
+    <div class="wrap design-wrap reveal">
       <div>
         <span class="tag-en">Garden Design</span>
         <h2 style="margin-top:8px;">आपके स्पेस के हिसाब से गार्डन डिज़ाइन</h2>
@@ -652,7 +745,7 @@
 
   <!-- ABOUT -->
   <section id="about" class="section section-bg">
-    <div class="wrap about">
+    <div class="wrap about reveal">
       <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="नर्सरी चित्र">
         <circle cx="150" cy="150" r="140" fill="#DCE6D6"/>
         <path d="M90 210 Q90 120 150 90 Q210 120 210 210 Z" fill="#7C9473"/>
@@ -673,37 +766,37 @@
   <!-- CONTACT -->
   <section id="contact" class="section section-bg">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <div>
           <span class="tag-en">Contact</span>
           <h2>संपर्क करें</h2>
         </div>
         <p>ऑर्डर, विज़िट या गार्डन डिज़ाइन कंसल्टेशन के लिए नीचे दिए गए तरीकों से संपर्क करें।</p>
       </div>
-      <div class="contact-wrap">
+      <div class="contact-wrap reveal">
         <div>
           <div class="info-line">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <div><strong>फ़ोन / व्हाट्सऐप</strong><span>+91 XXXXX XXXXX &nbsp;(यहाँ अपना नंबर डालें)</span></div>
+            <div><strong>फ़ोन / व्हाट्सऐप</strong><span>+91 80535 49942</span></div>
           </div>
           <div class="info-line">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div><strong>पता</strong><span>यहाँ नर्सरी का पूरा पता डालें</span></div>
+            <div><strong>पता</strong><span>13-17, सेक्टर, HUDA</span></div>
           </div>
           <div class="info-line">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
-            <div><strong>ईमेल</strong><span>yourmail@example.com</span></div>
+            <div><strong>ईमेल</strong><span>sainiabhishek9994@gmail.com</span></div>
           </div>
           <div class="info-line">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-            <div><strong>समय</strong><span>रोज़ सुबह 8:00 बजे — शाम 7:00 बजे तक खुला</span></div>
+            <div><strong>समय</strong><span>हमेशा खुला — 24x7</span></div>
           </div>
-          <a class="whatsapp-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">
+          <a class="whatsapp-btn" href="https://wa.me/918053549942" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 003.7 17L2 22l5.2-1.6A11 11 0 1020.5 3.5zM12 20a8 8 0 01-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1112 20z"/></svg>
             व्हाट्सऐप पर मैसेज करें
           </a>
         </div>
-        <form action="mailto:yourmail@example.com" method="post" enctype="text/plain">
+        <form action="mailto:sainiabhishek9994@gmail.com" method="post" enctype="text/plain">
           <div>
             <label for="name">आपका नाम</label>
             <input id="name" name="name" type="text" required>
@@ -728,7 +821,7 @@
 <footer>
   <div class="wrap">
     <div class="foot-row">
-      <span class="foot-brand">हरियाली नर्सरी</span>
+      <span class="foot-brand">दिशा गार्डनिंग</span>
       <nav class="foot-links">
         <a href="#plants">पौधे</a>
         <a href="#pots">गमले</a>
@@ -738,7 +831,7 @@
       </nav>
     </div>
     <div class="foot-bottom">
-      <span>&copy; <span id="year"></span> हरियाली नर्सरी। सर्वाधिकार सुरक्षित।</span>
+      <span>&copy; <span id="year"></span> दिशा गार्डनिंग। सर्वाधिकार सुरक्षित।</span>
       <span>Made with care for plant lovers</span>
     </div>
   </div>
@@ -759,6 +852,28 @@
       hamburger.setAttribute('aria-expanded', 'false');
     });
   });
+
+  /* Scroll reveal animation */
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+
+  /* Sticky header shadow on scroll */
+  const siteHeader = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive: true });
 </script>
 
 </body>

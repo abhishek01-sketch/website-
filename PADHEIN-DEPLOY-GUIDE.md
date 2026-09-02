@@ -1,17 +1,18 @@
 # Website Live Karne Ka Guide (Free)
 
 ## Files ismein hain
-- `index.html` — poora website (ek hi file mein HTML+CSS+JS)
+- `index.html` — poora website (ek hi file mein HTML+CSS+JS), naam **"दिशा गार्डनिंग / Disha Gardening"**
 - `robots.txt` + `sitemap.xml` — Google ko site samajhne ke liye
-- Contact info abhi placeholder hai (`+91 XXXXX XXXXX`, address, email) — jab bhi ready ho, `index.html` mein Ctrl+F se dhoondh ke apni details daal dena. 4 jagah change karni hai: phone/WhatsApp number (2 jagah), address, email (2 jagah).
+- Contact details already daali hui hain: phone/WhatsApp `8053549942`, address `13-17, Sector, HUDA`, email `sainiabhishek9994@gmail.com`, timing "हमेशा खुला — 24x7"
+- Saari plants/pots photos free-license (Unsplash) se seedhi internet se load hoti hain — koi photo upload karne ki zarurat nahi. Bas site ko internet chalu hote hue hi dekhna, tabhi photos dikhengi.
 
 ## Step 1 — Free Hosting (GitHub Pages)
 1. github.com par free account bana lo (agar nahi hai).
-2. Ek naya repository banao, naam: `hariyali-nursery` (ya jo bhi naam pasand ho).
-3. `index.html`, `robots.txt`, `sitemap.xml` — teeno files us repo mein upload kar do (GitHub website par "Add file → Upload files" se seedha ho jayega, terminal ki zarurat nahi).
+2. Ek naya repository banao, naam: `disha-gardening` (ya jo bhi naam pasand ho).
+3. `index.html`, `robots.txt`, `sitemap.xml` — teeno files us repo mein upload kar do (GitHub website par "Add file → Upload files" se seedha ho jayega, terminal ki zarurat nahi). Purani file already repo mein hai to upload karte waqt "replace existing file" wala option chunna.
 4. Repo ke Settings → Pages mein jao → Branch select karo `main` → Save.
 5. 1-2 minute mein site live ho jayegi is link par:
-   `https://<your-github-username>.github.io/hariyali-nursery/`
+   `https://<your-github-username>.github.io/<repo-name>/`
 
 Ye link bilkul free hai, koi cost nahi. Isse phone, laptop, tablet — har jagah khulegi (responsive design already built-in hai).
 
@@ -31,15 +32,24 @@ Agar bilkul free hi chahiye, `github.io` wala link filhaal use kar sakte ho — 
    `sitemap.xml`
 5. Google ab site ko crawl karke Google Search mein dikhana shuru kar dega. Isme kabhi-kabhi kuch din se 2 hafte tak lag sakte hain.
 
-## Step 4 — Contact Info Add Karna
-Jab details ready ho, `index.html` file mein ye jagah update karna:
-- WhatsApp number: `https://wa.me/91XXXXXXXXXX` (XXXXXXXXXX ki jagah 10-digit number)
-- Phone display text: `+91 XXXXX XXXXX`
-- Address: contact section mein "यहाँ नर्सरी का पूरा पता डालें"
-- Email: 2 jagah `yourmail@example.com` ko replace karna
+## Photos ke baare mein
+Filhaal saari photos free-license Unsplash se hain (indoor plants, outdoor plants, phool, fal, succulents, herbal plants, aur sabhi tarah ke pots) — koi copyright issue nahi, professional dikhti hain. Jab bhi aap apni nursery ki asli photos khींचना chaho:
+
+1. Phone se achhi roshni mein clear photo lo (har category ke liye ek photo — indoor plants, outdoor plants, pots types waghera)
+2. `index.html` file mein Ctrl+F se `images.unsplash.com` search karo — jitni bhi jagah milegi wahan `src="..."` ke andar wala link apni photo ke link/file se replace kar dena
+3. Agar photo apne computer se lagani hai (URL nahi), to photo ko `images` naam ke folder mein daal ke GitHub par upload karo, aur code mein `src="images/photo-naam.jpg"` likh dena
+
+Photo size 200-500 KB rakhna best hai (compressor.io se free mein chhota kar sakte ho), warna site slow ho sakti hai.
+
+## Website mein kya-kya add ho chuka hai
+- Naam: दिशा गार्डनिंग (Disha Gardening)
+- Har plant/pot category ki real photo
+- Scroll karte waqt smooth fade-in animation
+- Cards par hover karne se lift/zoom effect
+- Hero section mein background photo + animated entrance
+- Contact section mein aapka phone, address, email, WhatsApp button (24x7 khula dikhaya gaya hai)
 
 ## Aage kya add kar sakte ho (optional)
-- Asli nursery/plants ki photos (abhi illustrations hain)
 - Google Maps embed (address ke saath map dikhana)
 - Har plant/pot ke saath price
 - WhatsApp Business catalog link
